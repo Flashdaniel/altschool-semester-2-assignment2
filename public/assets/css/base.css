@@ -1,0 +1,87 @@
+@font-face {
+  font-family: Archivo;
+  src: url(../font/static/Archivo-Regular.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url(../font/static/Archivo-Medium.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url(../font/static/Archivo-SemiBold.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Archivo;
+  src: url(../font/static/Archivo-Bold.ttf);
+  font-style: normal;
+}
+
+body {
+  font-family: Archivo, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: var(--text-size);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  --text-color: #000000;
+  --weight: 700;
+
+  font-size: var(--text-size);
+  font-weight: var(--weight);
+  line-height: var(--line-height);
+  color: var(--text-color);
+}
+
+h1 {
+  --text-size: 3.2rem;
+}
+
+h3 {
+  --text-color: #656565;
+}
+
+p {
+  font-size: var(--text-size);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.products_breadcrums {
+  --text-size: 1.8rem;
+}
+
+.products_breadcrum:last-of-type {
+  --text-color: #656565;
+  --weight: 400;
+
+  font-weight: var(--weight);
+  color: var(--text-color);
+}
+
+.card_img-caption {
+  --text-color: #000000;
+
+  color: var(--text-color);
+  font-size: var(--text-size);
+}
+
+.pagination_number--active {
+  --text-color: #000000;
+  --weight: 600;
+
+  font-weight: var(--weight);
+  color: var(--text-color);
+}
