@@ -22,6 +22,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: Archivo;
+  src: url(../font/Archivo-VariableFont_wdth\,wght.ttf);
+  font-stretch: 50% 150%;
+}
+
 body {
   font-family: Archivo, sans-serif;
   background-color: var(--bg-color);
@@ -33,6 +39,7 @@ h1,
 h2,
 h3,
 h4 {
+  --line-height: 1;
   --text-color: #000000;
   --weight: 700;
 

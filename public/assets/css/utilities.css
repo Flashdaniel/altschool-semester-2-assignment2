@@ -1,5 +1,13 @@
+.font-size-18 {
+  --text-size: 1.8rem;
+}
+
 .font-size-22 {
   --text-size: 2.2rem;
+}
+
+.font-size-23 {
+  --text-size: 2.3rem;
 }
 
 .font-size-29 {
@@ -16,4 +24,32 @@
   justify-content: var(--justify);
   align-items: var(--align);
   gap: var(--gap);
+}
+
+.gridbox {
+  display: var(--grid);
+  grid-template-columns: var(--columns);
+  justify-items: var(--justify);
+  align-items: var(--align);
+  gap: (--gap);
+}
+
+.align-end {
+  align-self: end;
+}
+
+.align-start {
+  align-self: start;
+}
+
+.mt-24 {
+  margin-block-start: 2.4rem;
+}
+
+.mb-25 {
+  margin-block-end: 3.5rem;
+}
+
+.pb-20 {
+  padding-block-end: 2rem;
 }

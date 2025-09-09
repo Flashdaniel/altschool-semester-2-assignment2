@@ -6,6 +6,13 @@
   border-block-end: 4px solid #e4e4e4;
 }
 
+h1,
+h2 {
+  --padding-y: 3rem;
+
+  padding-block: var(--padding-y);
+}
+
 nav {
   --flex: flex;
   --justify: space-between;
@@ -17,8 +24,55 @@ nav {
   block-size: 1.967rem;
 }
 
-.content {
+.Samurai-King-Resting,
+.products {
   --padding-x: 2rem;
 
   padding-inline: var(--padding-x);
+}
+
+.card_img-container {
+  --grid: grid;
+}
+
+.card_img {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card_img-caption {
+  --flex: flex;
+  --align: center;
+  --padding-y: 1.5rem;
+  --padding-x: 4.3rem;
+  --weight: 700;
+
+  grid-column: 1;
+  grid-row: 1;
+  background-color: var(--bg-color);
+  inline-size: fit-content;
+  padding: var(--padding-y) var(--padding-x);
+  font-weight: var(--weight);
+}
+
+.card_text {
+  padding-block: var(--padding-y);
+}
+
+.people-also-buy_img-container {
+  --flex: flex;
+  --gap: 2rem;
+  padding-block-end: var(--padding-y);
+}
+
+.products {
+  border-block-start: 4px solid #e4e4e4;
+}
+
+.products_header {
+  --flex: flex;
+  --gap: 1rem;
+  --justify: space-between;
+
+  padding-block: 3.5rem 1rem;
 }
