@@ -59,6 +59,10 @@ ul {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .products_breadcrums {
   --text-size: 1.8rem;
 }

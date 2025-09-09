@@ -1,0 +1,24 @@
+.main-header {
+  --padding-x: 2.8rem;
+  --padding-y: 1rem;
+
+  padding: var(--padding-y) var(--padding-x);
+  border-block-end: 4px solid #e4e4e4;
+}
+
+nav {
+  --flex: flex;
+  --justify: space-between;
+  --align: center;
+}
+
+.logo-link {
+  inline-size: 12.4rem;
+  block-size: 1.967rem;
+}
+
+.content {
+  --padding-x: 2rem;
+
+  padding-inline: var(--padding-x);
+}

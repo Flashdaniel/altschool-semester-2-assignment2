@@ -9,3 +9,11 @@
 .font-size-34 {
   --text-size: 3.4rem;
 }
+
+.flexbox {
+  display: var(--flex);
+  flex-direction: var(--flex-direction);
+  justify-content: var(--justify);
+  align-items: var(--align);
+  gap: var(--gap);
+}

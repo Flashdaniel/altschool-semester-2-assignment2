@@ -1,0 +1,15 @@
+.icon-btn {
+  --padding-x: 0.7rem;
+
+  border: none;
+  background-color: transparent;
+  padding: var(--padding-x);
+  border-radius: 8px;
+}
+
+.icon-btn:hover,
+.icon-btn:focus-visible {
+  --bg-color: #dcd9d9;
+
+  background-color: var(--bg-color);
+}
