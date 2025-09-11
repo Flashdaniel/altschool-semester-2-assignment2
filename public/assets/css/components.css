@@ -5,13 +5,18 @@
   background-color: transparent;
   padding: var(--padding-x);
   border-radius: 8px;
+  transition: background-color 0.7s ease;
 }
 
 .icon-btn:hover,
 .icon-btn:focus-visible {
-  --bg-color: #dcd9d9;
+  --bg-color: #ececec;
 
   background-color: var(--bg-color);
+}
+
+.icon-btn:active {
+  --bg-color: #e4e4e4;
 }
 
 .card_btn {
@@ -26,4 +31,6 @@
   font-size: 2.3rem;
   font-weight: var(--weight);
   letter-spacing: 0.2rem;
+  border: none;
+  cursor: pointer;
 }

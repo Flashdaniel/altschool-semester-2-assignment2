@@ -6,6 +6,10 @@
   border-block-end: 4px solid #e4e4e4;
 }
 
+body {
+  padding-block-end: 10rem;
+}
+
 h1,
 h2 {
   --padding-y: 3rem;
@@ -22,6 +26,30 @@ nav {
 .logo-link {
   inline-size: 12.4rem;
   block-size: 1.967rem;
+}
+
+.shopping-cart {
+  position: relative;
+}
+
+.count {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --size: 1.8rem;
+  --weight: 700;
+
+  position: absolute;
+  top: 70%;
+  right: -10%;
+  display: var(--flex);
+  justify-content: center;
+  align-items: center;
+  inline-size: var(--size);
+  block-size: var(--size);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: var(--weight);
 }
 
 .Samurai-King-Resting,
@@ -73,6 +101,51 @@ nav {
   --flex: flex;
   --gap: 1rem;
   --justify: space-between;
+  --align: center;
 
   padding-block: 3.5rem 1rem;
+}
+
+h3 {
+  --padding-y: 2rem;
+
+  margin-block: var(--padding-y);
+}
+
+h4 {
+  margin-block-end: 1rem;
+}
+
+.card {
+  margin-block-end: 4rem;
+}
+
+.pagination {
+  --flex: flex;
+  --justify: center;
+  --gap: 1rem;
+  --align: center;
+}
+
+.pagination_numbers {
+  --flex: inherit;
+  --align: center;
+  --gap: 1rem;
+  --text-color: #000000;
+}
+
+.pagination_number,
+.pagination_number--active {
+  cursor: pointer;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  transition:
+    color 0.7s ease,
+    background-color 0.7s ease;
+}
+
+.pagination_number:hover,
+.pagination_number--active:hover {
+  color: var(--text-color);
+  background-color: #ececec;
 }

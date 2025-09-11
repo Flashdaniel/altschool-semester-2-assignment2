@@ -20,7 +20,7 @@
             height="19.67"
           />
         </a>
-        <a href="#" class="link icon-btn"
+        <a href="#" class="link shopping-cart icon-btn"
           ><img
             class="icon"
             src="./public/assets/images/icons/shopping-cart.svg"
@@ -28,7 +28,9 @@
             role="img"
             width="32"
             height="32"
-        /></a>
+          />
+          <span class="count">1</span></a
+        >
       </nav>
     </header>
     <main class="container content">
@@ -50,7 +52,7 @@
             <p class="card_img-caption flexbox align-end">Photo of the day</p>
           </div>
 
-          <button class="btn card_btn mt-24">ADD TO CART</button>
+          <button id="1" class="btn card_btn mt-24">ADD TO CART</button>
 
           <figcaption class="card_content">
             <article>
@@ -75,6 +77,7 @@
                     width="97.57"
                     height="122.58"
                     role="img"
+                    loading="lazy"
                   />
                 </div>
                 <div class="img-container">
@@ -85,6 +88,7 @@
                     width="97.57"
                     height="122.58"
                     role="img"
+                    loading="lazy"
                   />
                 </div>
                 <div class="img-container">
@@ -95,6 +99,7 @@
                     width="97.57"
                     height="122.58"
                     role="img"
+                    loading="lazy"
                   />
                 </div>
               </section>
@@ -223,11 +228,12 @@
                     alt="Red Bench"
                     width="382"
                     height="502"
+                    loading="lazy"
                   />
                   <p class="card_img-caption align-start">Best Seller</p>
                 </div>
 
-                <button class="btn card_btn">ADD TO CART</button>
+                <button id="2" class="btn card_btn">ADD TO CART</button>
 
                 <figcaption class="card_content">
                   <article>
@@ -251,10 +257,11 @@
                     alt="Egg balloon"
                     width="382"
                     height="502"
+                    loading="lazy"
                   />
                 </div>
 
-                <button class="btn card_btn">ADD TO CART</button>
+                <button id="3" class="btn card_btn">ADD TO CART</button>
 
                 <figcaption class="card_content">
                   <article>
@@ -278,10 +285,11 @@
                     alt="Egg balloon"
                     width="382"
                     height="502"
+                    loading="lazy"
                   />
                 </div>
 
-                <button class="btn card_btn">ADD TO CART</button>
+                <button id="4" class="btn card_btn">ADD TO CART</button>
 
                 <figcaption class="card_content">
                   <article>
@@ -305,10 +313,11 @@
                     alt="Man"
                     width="382"
                     height="502"
+                    loading="lazy"
                   />
                 </div>
 
-                <button class="btn card_btn">ADD TO CART</button>
+                <button id="5" class="btn card_btn">ADD TO CART</button>
 
                 <figcaption class="card_content">
                   <article>
@@ -334,10 +343,11 @@
                     alt="Architecture"
                     width="382"
                     height="502"
+                    loading="lazy"
                   />
                 </div>
 
-                <button class="btn card_btn">ADD TO CART</button>
+                <button id="6" class="btn card_btn">ADD TO CART</button>
 
                 <figcaption class="card_content">
                   <article>
@@ -363,10 +373,11 @@
                     alt="Architecture"
                     width="382"
                     height="502"
+                    loading="lazy"
                   />
                 </div>
 
-                <button class="btn card_btn">ADD TO CART</button>
+                <button id="7" class="btn card_btn">ADD TO CART</button>
 
                 <figcaption class="card_content">
                   <article>
@@ -385,7 +396,7 @@
             </li>
           </ul>
         </section>
-        <section class="pagination">
+        <section class="pagination flexbox">
           <button class="btn icon-btn">
             <img
               class="icon"
@@ -396,12 +407,11 @@
               height="16"
             />
           </button>
-          <ul class="pagination_numbers">
+          <ul class="pagination_numbers flexbox">
             <li class="pagination_number font-size-29">1</li>
             <li class="pagination_number font-size-29">2</li>
             <li class="pagination_number--active font-size-29">3</li>
             <li class="pagination_number font-size-29">4</li>
-            <li class="pagination_number font-size-29">5</li>
           </ul>
           <button class="btn icon-btn">
             <img

@@ -96,3 +96,7 @@ a {
   font-weight: var(--weight);
   color: var(--text-color);
 }
+
+.people-also-buy_img {
+  cursor: pointer;
+}
