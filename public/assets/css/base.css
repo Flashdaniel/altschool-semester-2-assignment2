@@ -70,6 +70,34 @@ a {
   text-decoration: none;
 }
 
+.cart-item_name {
+  --text-size: clamp(1.4rem, 1.2rem + 0.5vw, 2rem);
+  --text-color: #000000;
+  --weight: 700;
+
+  font-size: var(--text-size);
+  font-weight: var(--weight);
+  color: var(--text-color);
+}
+
+.cart-item_price {
+  --text-size: clamp(1.4rem, 1.2rem + 0.5vw, 2rem);
+
+  font-size: var(--text-size);
+}
+
+.clear-btn {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --weight: 500;
+  --letter-spacing: 0.2rem;
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-weight: var(--weight);
+  letter-spacing: var(--letter-spacing);
+}
+
 .products_breadcrums {
   --text-size: 1.8rem;
 }

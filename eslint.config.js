@@ -12,7 +12,13 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
     rules: {
       ...eslintConfigPrettier.rules,
-      "prettier/prettier": "error",
+      "prettier/prettier": [
+        "error",
+        {
+          endOfLine: "lf",
+          insertFinalNewline: true,
+        },
+      ],
       "no-unused-vars": "error",
       semi: ["error", "always"],
     },
