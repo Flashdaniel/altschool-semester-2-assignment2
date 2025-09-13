@@ -1,5 +1,6 @@
 export default function displayProducts(products) {
   const productList = document.querySelector(".products_list");
+  productList.innerHTML = "";
   products.forEach((product) => {
     if (product.id === 1) return;
     const productItem = document.createElement("li");

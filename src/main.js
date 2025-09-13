@@ -9,7 +9,7 @@ const products = [
     id: 1,
     name: "Samurai King Resting",
     url: "./public/assets/images/hero-img.jpg",
-    category: "food",
+    category: "Food",
     price: 10000.0,
     photoOfTheDay: true,
   },
@@ -17,7 +17,7 @@ const products = [
     id: 2,
     name: "Red Bench",
     url: "./public/assets/images/Red-Bench.png",
-    category: "people",
+    category: "People",
     price: 3.89,
     bestSeller: true,
   },
@@ -25,21 +25,21 @@ const products = [
     id: 3,
     name: "Egg Balloon",
     url: "./public/assets/images/Egg-Balloon.jpg",
-    category: "food",
+    category: "Food",
     price: 93.89,
   },
   {
     id: 4,
     name: "Egg Balloon",
     url: "./public/assets/images/Egg-Balloon.jpg",
-    category: "food",
+    category: "Food",
     price: 93.89,
   },
   {
     id: 5,
     name: "Man",
     url: "./public/assets/images/pexels-photo.png",
-    category: "people",
+    category: "People",
     price: 100.0,
   },
   {
@@ -90,7 +90,6 @@ document.querySelectorAll(".card_btn").forEach((button) => {
         showCartCount(cart);
         displayProductsInCart(cart);
       }
-      console.log(cart);
     }
   });
 });
@@ -106,6 +105,7 @@ clearBtn.addEventListener("click", () => {
   cart = clearCart(cart);
 });
 
+// Filter dialog functionality
 const filterBtn = document.querySelector(".product_filter-btn");
 const dialog = document.querySelector(".product_dialog-filter");
 
@@ -117,4 +117,63 @@ const closeBtn = document.querySelector(".filter-close-btn");
 
 closeBtn.addEventListener("click", () => {
   if (dialog) dialog.close();
+});
+
+const filterClearBtn = document.querySelector(".filter-btn-clear");
+const filterSaveBtn = document.querySelector(".filter-btn-save");
+
+filterClearBtn.addEventListener("click", () => {
+  const checkboxes = document.querySelectorAll(".filter-checkbox");
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = false;
+  });
+});
+
+filterSaveBtn.addEventListener("click", function filter() {
+  const checkboxes = document.querySelectorAll(".filter-checkbox");
+  const selected = [];
+  checkboxes.forEach((checkbox) => {
+    if (checkbox.checked) {
+      selected.push(checkbox.value);
+    }
+  });
+
+  if (selected.length > 0) {
+    const filteredProductsPrice = products.filter((product) => {
+      if (product.price < 20 && selected.includes("Lower then $20")) {
+        return true;
+      } else if (
+        product.price >= 20 &&
+        product.price <= 100 &&
+        selected.includes("$20 - $100")
+      ) {
+        return true;
+      } else if (
+        product.price > 100 &&
+        product.price <= 200 &&
+        selected.includes("$100 - $200")
+      ) {
+        return true;
+      } else if (product.price > 200 && selected.includes("More than $200")) {
+        return true;
+      }
+      return false;
+    });
+
+    const filteredProductsCategory = products.filter((product) => {
+      if (selected.includes(product.category)) {
+        return true;
+      }
+      return false;
+    });
+
+    const finalFilteredProducts = [
+      ...new Set([...filteredProductsPrice, ...filteredProductsCategory]),
+    ];
+
+    displayProducts(finalFilteredProducts);
+  } else {
+    displayProducts(products);
+  }
+  dialog.close();
 });
