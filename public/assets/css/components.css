@@ -34,3 +34,9 @@
   border: none;
   cursor: pointer;
 }
+
+.card_btn:hover {
+  --bg-color: #333333;
+
+  background-color: var(--bg-color);
+}

@@ -31,7 +31,7 @@
   grid-template-columns: var(--columns);
   justify-items: var(--justify);
   align-items: var(--align);
-  gap: (--gap);
+  gap: var(--gap);
 }
 
 .align-end {

@@ -110,6 +110,15 @@ a {
   color: var(--text-color);
 }
 
+.product_category,
+.product_price {
+  --text-size: 2.8rem;
+  --weight: 400;
+
+  font-size: var(--text-size);
+  font-weight: var(--weight);
+}
+
 .card_img-caption {
   --text-color: #000000;
 

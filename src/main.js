@@ -105,3 +105,16 @@ shoppingbtn.addEventListener("click", () => {
 clearBtn.addEventListener("click", () => {
   cart = clearCart(cart);
 });
+
+const filterBtn = document.querySelector(".product_filter-btn");
+const dialog = document.querySelector(".product_dialog-filter");
+
+filterBtn.addEventListener("click", () => {
+  if (dialog) dialog.showModal();
+});
+
+const closeBtn = document.querySelector(".filter-close-btn");
+
+closeBtn.addEventListener("click", () => {
+  if (dialog) dialog.close();
+});
