@@ -129,7 +129,15 @@ filterClearBtn.addEventListener("click", () => {
   });
 });
 
-filterSaveBtn.addEventListener("click", function filter() {
+filterSaveBtn.addEventListener("click", filter);
+
+const checkboxes = document.querySelectorAll(".filter-checkbox");
+
+[...checkboxes].forEach((checkbox) => {
+  checkbox.addEventListener("change", filter);
+});
+
+function filter() {
   const checkboxes = document.querySelectorAll(".filter-checkbox");
   const selected = [];
   checkboxes.forEach((checkbox) => {
@@ -175,5 +183,6 @@ filterSaveBtn.addEventListener("click", function filter() {
   } else {
     displayProducts(products);
   }
-  dialog.close();
-});
+
+  if (dialog) dialog.close();
+}

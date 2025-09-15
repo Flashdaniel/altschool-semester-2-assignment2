@@ -123,7 +123,7 @@ nav {
 }
 
 .card_img {
-  grid-column: 1;
+  grid-column: 1/-1;
   grid-row: 1;
 }
 
@@ -156,6 +156,14 @@ nav {
   border-block-start: 4px solid #e4e4e4;
 }
 
+.product_none-dialog-filter {
+  display: none;
+}
+
+.product > img {
+  width: 100%;
+}
+
 .products_header {
   --flex: flex;
   --gap: 1rem;
@@ -163,10 +171,23 @@ nav {
   --align: center;
 
   padding-block: 3.5rem 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 .products_sort-container {
   display: none;
+}
+
+.products_list {
+  --grid: grid;
+  --columns: repeat(auto-fill, minmax(min(21rem, 100%), 1fr));
+  --gap: 2.5rem;
+  max-inline-size: min(90rem, 100%);
+}
+
+.card_img {
+  object-fit: cover;
 }
 
 .product_dialog-filter {
@@ -343,12 +364,97 @@ h4 {
   background-color: #ececec;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 60em) {
+  .card_group-img-title-btn {
+    --grid: grid;
+    --columns: repeat(2, 1fr);
+    --align: start;
+    --gap: 1rem;
+  }
+
+  .card_img-container {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+
+  .hero-img {
+    inline-size: 100%;
+    height: 55.3rem;
+    object-fit: cover;
+  }
+
+  .card_group-img-title-btn > button {
+    inline-size: fit-content;
+    padding: 1rem 4rem;
+    justify-self: end;
+  }
+
+  .about-section {
+    max-inline-size: 27ch;
+  }
+
+  .products_list-container {
+    --flex: flex;
+    --gap: 2rem;
+    --justify: space-between;
+  }
+
   .product_filter-btn {
     display: none;
   }
 
-  .products_sort-container {
+  .products_breadcrums {
+    font-size: 3.3rem;
+  }
+
+  .product_dialog-filter {
+    display: none;
+  }
+
+  .product_none-dialog-filter {
     display: block;
+  }
+
+  .product_filter-item + .product_filter-item {
+    margin-block-start: 2.5rem;
+  }
+
+  .card_title {
+    margin-block-start: 2rem;
+  }
+  .card_content {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .Samurai-King-Resting {
+    padding-block-end: 1rem;
+  }
+
+  .people-also-buy {
+    display: inherit;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    flex: 1;
+  }
+
+  .card_content > article {
+    flex: 2;
+    max-inline-size: 80ch;
+  }
+
+  .checkbox {
+    inline-size: 2.7rem;
+    block-size: 2.7rem;
+  }
+
+  .product_category,
+  .product_price {
+    --text-size: 2rem;
+  }
+
+  .product_filter-item {
+    --gap: 0;
   }
 }

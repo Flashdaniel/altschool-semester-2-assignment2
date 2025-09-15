@@ -27,7 +27,7 @@ img {
 
 /* 6. Inherit fonts for form controls */
 input,
-button {
+select button {
   font: inherit;
 }
 

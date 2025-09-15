@@ -36,34 +36,47 @@
     <main class="container content">
       <section class="Samurai-King-Resting mb-25" aria-labelledby="card_title">
         <figure class="card">
-          <h1 id="card_title" class="card_title font-size-32">
-            Samurai King Resting
-          </h1>
+          <div class="card_group-img-title-btn gridbox">
+            <h1 id="card_title" class="card_title font-size-32">
+              Samurai King Resting
+            </h1>
 
-          <div class="card_img-container gridbox">
-            <img
-              class="card_img align-start"
-              src="./public/assets/images/hero-img.jpg"
-              alt="A cute dog"
-              role="img"
-              width="382"
-              height="239"
-            />
-            <p class="card_img-caption flexbox align-end">Photo of the day</p>
+            <div class="card_img-container gridbox">
+              <img
+                class="card_img hero-img align-start"
+                src="./public/assets/images/hero-img.jpg"
+                srcset="
+                  ./public/assets/images/hero-img.jpg    382w,
+                  ./public/assets/images/hero-img=2.jpg 1290w
+                "
+                sizes="(min-width: 50em), 1290w, 100vw"
+                alt="A cute dog"
+                role="img"
+              />
+              <p class="card_img-caption flexbox align-end">Photo of the day</p>
+            </div>
+
+            <button id="1" class="btn card_btn mt-24">ADD TO CART</button>
           </div>
-
-          <button id="1" class="btn card_btn mt-24">ADD TO CART</button>
 
           <figcaption class="card_content">
             <article>
-              <h2 class="card_title font-size-22">
-                About the Samurai King Resting
+              <h2 class="card_title about-section font-size-22">
+                About the Samurai King Resting Pets
               </h2>
               <p class="card_text font-size-18">
                 So how did the classical Latin become so incoherent? According
                 to McClintock, a 15th century typesetter likely scrambled part
                 of Cicero's De Finibus in order to provide placeholder text to
-                mockup various fonts for a type specimen book.
+                mockup various fonts for a type specimen book.So how did the
+                classical Latin become so incoherent? According to McClintock, a
+                15th century typesetter likely scrambled part of Cicero's De
+                Finibus in order to provide placeholder
+              </p>
+              <p class="card_text font-size-18 mt-24">
+                text to mockup various fonts for a type specimen book.So how did
+                the classical Latin become so incoherent? According to
+                McClintock.
               </p>
             </article>
             <aside class="people-also-buy">
@@ -105,7 +118,9 @@
               </section>
               <section class="card_product-details">
                 <h2 class="card_title font-size-22 pb-20">Details</h2>
-                <p class="card_text font-size-23">Size: 1020 x 1020 pixel</p>
+                <p class="card_text font-size-23 no-text-wrap">
+                  Size: 1020 x 1020 pixel
+                </p>
                 <p class="card_text font-size-22">Size: 15 mb</p>
               </section>
             </aside>
@@ -138,7 +153,7 @@
                 height="15"
               /><span>Sort By</span></label
             >
-            <select name="sort" id="sort" class="products_sort font-size-18">
+            <select name="sort" id="sort" class="products_sort">
               <option value="relevance">Price</option>
               <option value="price-low-to-high">Price, low to high</option>
               <option value="price-high-to-low">Price, high to low</option>
@@ -262,8 +277,115 @@
             </div>
           </dialog>
         </section>
-        <section class="products_list-container">
-          <ul class="products_list" role="list"></ul>
+        <section class="products_list-container flexbox">
+          <div class="product_filter product_none-dialog-filter font-size-18">
+            <section>
+              <h2 class="filter-title flexbox">
+                <span>Category</span>
+              </h2>
+              <ul class="product_category">
+                <li class="product_filter-item gridbox">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    value="People"
+                  /><span class="checkbox"></span
+                  ><span class="filter-label">People</span>
+                </li>
+                <li class="product_filter-item gridbox">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    value="Premium"
+                  /><span class="checkbox"></span
+                  ><span class="filter-label">Premium</span>
+                </li>
+                <li class="product_filter-item gridbox">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    value="Pets"
+                  /><span class="checkbox"></span
+                  ><span class="filter-label">Pets</span>
+                </li>
+                <li class="product_filter-item gridbox">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    value="Food"
+                  /><span class="checkbox"></span
+                  ><span class="filter-label">Food</span>
+                </li>
+                <li class="product_filter-item gridbox">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    value="Landmarks"
+                  /><span class="checkbox"></span
+                  ><span class="filter-label">Landmarks</span>
+                </li>
+                <li class="product_filter-item gridbox">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    value="Cities"
+                  /><span class="checkbox"></span
+                  ><span class="filter-label">Cities</span>
+                </li>
+                <li class="product_filter-item gridbox">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    value="Nature"
+                  /><span class="checkbox"></span
+                  ><span class="filter-label">Nature</span>
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 class="filter-title mb-60">Price range</h2>
+              <ul class="product_price">
+                <li class="product_filter-item gridbox">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    value="Lower then $20"
+                  />
+                  <span class="checkbox"></span>
+                  <span class="filter-label">Lower than $20</span>
+                </li>
+                <li class="product_filter-item gridbox">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    value="$20 - $100"
+                  />
+                  <span class="checkbox"></span>
+                  <span class="filter-label">$20 - $100</span>
+                </li>
+                <li class="product_filter-item gridbox">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    value="$100 - $200"
+                  />
+                  <span class="checkbox"></span>
+                  <span class="filter-label">$100 - $200</span>
+                </li>
+                <li class="product_filter-item gridbox">
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox"
+                    value="More than $200"
+                  />
+                  <span class="checkbox"></span>
+                  <span class="filter-label">More than $200</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <ul class="products_list gridbox" role="list"></ul>
         </section>
         <section class="pagination flexbox">
           <button class="btn icon-btn">

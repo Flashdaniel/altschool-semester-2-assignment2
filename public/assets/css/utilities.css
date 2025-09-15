@@ -53,3 +53,13 @@
 .pb-20 {
   padding-block-end: 2rem;
 }
+
+.mb-60 {
+  margin-block-start: 6rem;
+}
+
+.no-text-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
