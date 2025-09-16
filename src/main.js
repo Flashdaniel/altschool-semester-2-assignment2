@@ -186,3 +186,26 @@ function filter() {
 
   if (dialog) dialog.close();
 }
+
+// Sort functionality for products
+const productSort = document.querySelector(".products_sort");
+productSort.addEventListener("change", sortProducts);
+
+function sortProducts() {
+  const sortBy = productSort.value;
+  let sortedProducts = [...products];
+
+  if (sortBy === "price-low-to-high") {
+    sortedProducts.sort((a, b) => a.price - b.price);
+  } else if (sortBy === "price-high-to-low") {
+    sortedProducts.sort((a, b) => b.price - a.price);
+  } else if (sortBy === "best-selling") {
+    sortedProducts.sort((a, b) => {
+      if (a.bestSeller && !b.bestSeller) return -1;
+      if (!a.bestSeller && b.bestSeller) return 1;
+      return 0;
+    });
+  }
+
+  displayProducts(sortedProducts);
+}
