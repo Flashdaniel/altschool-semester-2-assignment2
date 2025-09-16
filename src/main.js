@@ -45,7 +45,7 @@ const products = [
   {
     id: 6,
     name: "Architecture",
-    url: "/images/Architecture.jpg",
+    url: "/assets/images/Architecture.jpg",
     category: "Landmarks",
     price: 101.0,
   },
