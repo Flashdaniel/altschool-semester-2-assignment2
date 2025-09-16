@@ -20,7 +20,7 @@ This is the finished design of the for the Bejamas\_ project.
 
 ### Links
 
-- Live Site URL: [url](https://flashdaniel.github.io/Light-visual-landing-page/)
+- Live Site URL: [url](https://begamas.netlify.app/)
 
 ## My process
 
