@@ -29,6 +29,7 @@ This is the finished design of the for the Bejamas\_ project.
 - Semantic HTML5 markup
 - CSS
 - Javascript
+- bun as package manager
 - Mobile-first workflow
 
 ## Author
