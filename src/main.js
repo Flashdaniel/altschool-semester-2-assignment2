@@ -67,7 +67,7 @@ const shoppingbtn = document.querySelector(".shopping-cart");
 // Toggle cart count visibility on click
 showCartCount(cart);
 
-// Add items to cart and update count
+// Add items to carts and update count
 document.querySelectorAll(".card_btn").forEach((button) => {
   button.addEventListener("click", () => {
     const id = button.id;
